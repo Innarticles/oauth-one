@@ -1,13 +1,14 @@
 
 # OAuth-One
 
-Simple helper that helps you build the url and make request to a service using OAuth 1.0.
+Easly make Oath1 requests to other services
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'oauth-one'
+    gem 'oauth-one', require: "oauth_one/helper"
+
 
 And then execute:
 
