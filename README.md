@@ -21,20 +21,13 @@ Or install it yourself as:
 ## Usage
 
     # Setup data
-    method = :get
-    domain_url = 'http://some.app.com/auth/'
-    user_date = { uid: user_email + encrypted_password }
-    oauth_config = { consumer_key: ENV['OAUTH_KEY'], consumer_secret: ENV['OAUTH_SECRET'] }
-
+    method = :post
+    domain_url = url
+    user_data = {lis_person_contact_email_primary: email, lis_person_contact_name_given: first_name,lis_person_contact_name_family: last_name, user_id: id.to_s}
+    oauth_config = { consumer_key: oauth_consumer_key, consumer_secret: secret_key }
     # Usage
-    oauth = Oauth::Helper.new(method, domain_url, user_data, oauth_config)
-
-    # Returns
-    oauth.signature_base # Returns the signature appended in the auth url
-    oauth.full_url       # The proper url used for authentication
-
-
-After that, all you need to do is to redirect the user to `oauth.full_url`.
+    oauth = OauthOne::Helper.new(method, domain_url, user_data, oauth_config)
+    response = oauth.make_request
 
 
 ## Contributing
