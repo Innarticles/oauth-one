@@ -20,9 +20,9 @@ Or install it yourself as:
 
 ## Usage
 
+    domain_url =  'https://www.example.com/some/service/'
     # Setup data
     method = :post
-    domain_url = url
     user_data = {lis_person_contact_email_primary: email, lis_person_contact_name_given: first_name,lis_person_contact_name_family: last_name, user_id: id.to_s}
     oauth_config = { consumer_key: oauth_consumer_key, consumer_secret: secret_key }
     # Usage
