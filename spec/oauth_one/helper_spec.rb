@@ -5,6 +5,7 @@ describe OauthOne::Helper do
   let(:params) { {user_specified_param: 'params'} }
   let(:consumer_key) { 'some_key' }
   let(:consumer_secret) { 'some_secret' }
+  let(:method) { 'some_method' }
 
   let(:helper) { OauthOne::Helper.new(:get, url, params, {consumer_key: consumer_key, consumer_secret: consumer_secret}) }
 
@@ -63,4 +64,16 @@ describe OauthOne::Helper do
     it { expect(full_url).to match(/oauth_signature=/) }
     it { expect(full_url).to match(/user_specified_param/) }
   end
+
+  describe '#make_request' do
+    # stubbed
+    # let(:full_url) { helper.full_url }
+
+    # it { expect(full_url).to match(/oauth_consumer_key=#{consumer_key}/) }
+    # it { expect(full_url).to match(/oauth_signature_method=HMAC-SHA1/) }
+    # it { expect(full_url).to match(/oauth_signature=/) }
+    # it { expect(full_url).to match(/user_specified_param/) }
+  end
+
+  
 end
